@@ -1,2 +1,2 @@
 # fullcycle24
-Exercises and implementations of fullcycle' course
+Exercises and implementations of FullCycle's course
