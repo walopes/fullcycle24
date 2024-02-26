@@ -16,3 +16,5 @@ $docker network ls
 # default is docker bridge
 docker network create --driver bridge minharede
 docker network connect minharede ubuntu
+docker inspect minharede
+docker run --rm -d --name nginx --network host nginx
