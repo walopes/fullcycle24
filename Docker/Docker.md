@@ -11,3 +11,8 @@ $ docker run -d --name nginx -p 8080:80 --mount type=bind,source="$(pwd)",target
 
 $docker volume
 $docker volume create meuvolume
+
+$docker network ls
+# default is docker bridge
+docker network create --driver bridge minharede
+docker network connect minharede ubuntu
