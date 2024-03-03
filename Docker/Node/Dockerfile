@@ -6,6 +6,6 @@ COPY . .
 
 EXPOSE 3000
 
-CMD ["node", "index.js"]
-
+# CMD commands commented (not necessary now)
+# CMD ["node", "index.js"]
 #docker build -t walopes/hello-express . -f Dockerfile.prod
