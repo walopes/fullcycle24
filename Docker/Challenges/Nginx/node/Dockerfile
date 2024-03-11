@@ -5,6 +5,6 @@ WORKDIR /usr/src/app
 
 RUN apt-get update && apt-get install -y wget
 
-EXPOSE 8000
+EXPOSE 5000
 
 CMD ["node", "index.js"]
