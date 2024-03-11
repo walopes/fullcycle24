@@ -21,11 +21,11 @@ services:
     networks:
     - fullcycle-challenge-network
     tty: true
+    # entrypoint: docker-entrypoint.sh
     ports:
-    # - "3000:80"
-    - "3000:80"
-    volumes:
-    - ./nginx/:/etc/nginx
+    - "8080:80"
+    # volumes:
+    # - ./nginx/:/etc/nginx
 
   app:
     build:
@@ -38,8 +38,8 @@ services:
     volumes:
       - ./node:/usr/src/app
     tty: true
-    # ports:
-    # - "3000:3000"
+    ports:
+    - "5000:5000"
 
   db:
     image: mysql:5.7
