@@ -128,3 +128,11 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+####### mysql
+*.pem
+*.cnf
+*.sock
+ib_*
+ibdata1
+#Docker/mysql/
