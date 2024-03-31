@@ -130,9 +130,4 @@ dist
 .pnp.*
 
 ####### mysql
-*.pem
-*.cnf
-*.sock
-ib_*
-ibdata1
-#Docker/mysql/
+Docker/mysql/
