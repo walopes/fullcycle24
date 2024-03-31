@@ -12,31 +12,32 @@
 version: '3'
 
 services:
-
   nginx:
     build:
       context: nginx
+    restart: always
     image: walopes/fullcyle_nginx
     container_name: nginx
-    networks:
-    - fullcycle-challenge-network
-    tty: true
+    # networks:
+    # - fullcycle-challenge-network
+    # tty: true
     # entrypoint: docker-entrypoint.sh
     ports:
     - "8080:80"
     # volumes:
     # - ./nginx/:/etc/nginx
 
-  app:
+  node:
     build:
       context: node
-    entrypoint: docker-entrypoint.sh
+    # entrypoint: docker-entrypoint.sh
     image: walopes/fullcyle_node
-    container_name: app
-    networks:
-      - fullcycle-challenge-network
-    volumes:
-      - ./node:/usr/src/app
+    container_name: node
+    restart: always
+    # networks:
+    #   - fullcycle-challenge-network
+    # volumes:
+    #   - ./node:/usr/src/app
     tty: true
     ports:
     - "5000:5000"
@@ -52,8 +53,8 @@ services:
     environment:
       - MYSQL_DATABASE=nodedb
       - MYSQL_ROOT_PASSWORD=root
-    networks:
-      - fullcycle-challenge-network
+    # networks:
+    #   - fullcycle-challenge-network
 
 networks:
   fullcycle-challenge-network:
