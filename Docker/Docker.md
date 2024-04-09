@@ -18,3 +18,5 @@ docker network create --driver bridge minharede
 docker network connect minharede ubuntu
 docker inspect minharede
 docker run --rm -d --name nginx --network host nginx
+
+docker-compose up -d --build # Build and execute docker-compose in detached mode
