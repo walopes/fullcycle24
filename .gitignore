@@ -129,7 +129,10 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-####### mysql
+## Application
+# MySql
 Docker/mysql/
-
 Docker/Challenges/Nginx/mysql/
+
+*.pem
+*.cnf
