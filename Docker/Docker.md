@@ -30,3 +30,6 @@ docker run --rm -d --name nginx --network host nginx
 
 docker-compose up -d --build # Build and execute docker-compose in detached mode
 > dockerize - to control dependencies between containers
+
+# Accessing physical machine from the container =>> host.docker.internal
+# eg.: curl http://host.docker.internal:8080
