@@ -21,14 +21,14 @@ $docker volume create meuvolume
 
 $docker network ls
 > default is docker bridge
-docker network create --driver bridge minharede
-docker network connect minharede ubuntu
-docker inspect minharede
-docker run --rm -d --name nginx --network host nginx
+$docker network create --driver bridge minharede
+$docker network connect minharede ubuntu
+$docker inspect minharede
+$docker run --rm -d --name nginx --network host nginx
 
 ## docker-compose
 
-docker-compose up -d --build # Build and execute docker-compose in detached mode
+$docker-compose up -d --build # Build and execute docker-compose in detached mode
 > dockerize - to control dependencies between containers
 
 # Accessing physical machine from the container =>> host.docker.internal
