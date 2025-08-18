@@ -3,6 +3,7 @@
 
 ## Run docker
 
+$docker exec -it aa334fds9 bash# execute the container iteractively
 $docker run -it ubuntu:latest bash tty # attach the ubuntu image to bash
 $docker run -it --rm ubuntu:latest bash tty # remove container just after executing it
 $ docker run -p 8080:80 -it nginx bash # set a port to publish
